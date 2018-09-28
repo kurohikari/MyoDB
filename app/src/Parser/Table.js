@@ -1,7 +1,7 @@
 "use strict";
-exports.__esModule = true;
-var Table = /** @class */ (function () {
-    function Table(name) {
+Object.defineProperty(exports, "__esModule", { value: true });
+class Table {
+    constructor(name) {
         this.name = name;
         this.columns = [];
     }
@@ -9,44 +9,43 @@ var Table = /** @class */ (function () {
      * Adds a column to the table
      * @param column column to add
      */
-    Table.prototype.AddColumn = function (column) {
+    AddColumn(column) {
         if (this.GetColumnWithName(column.GetName()) === null) {
             this.columns.push(column);
         }
-        throw new Error("Column with name \"" + column.GetName() + "\" already exists!");
-    };
+        else
+            throw new Error(`Column with name "${column.GetName()}" already exists!`);
+    }
     /**
      * Get the name of the table
      */
-    Table.prototype.GetName = function () {
+    GetName() {
         return this.name;
-    };
+    }
     /**
      * Get the number of columns in the table
      */
-    Table.prototype.GetColumnCount = function () {
+    GetColumnCount() {
         return this.columns.length;
-    };
+    }
     /**
      * Get a specific column in the table
      * @param index index of the column
      */
-    Table.prototype.GetColumnAt = function (index) {
+    GetColumnAt(index) {
         return this.columns[index];
-    };
+    }
     /**
      * Get a specific column in the table given its name
      * @param name name of the table
      */
-    Table.prototype.GetColumnWithName = function (name) {
-        for (var _i = 0, _a = this.columns; _i < _a.length; _i++) {
-            var column = _a[_i];
+    GetColumnWithName(name) {
+        for (let column of this.columns) {
             if (column.GetName() === name) {
                 return column;
             }
         }
         return null;
-    };
-    return Table;
-}());
+    }
+}
 exports.Table = Table;

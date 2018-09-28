@@ -16,7 +16,7 @@ export class Database {
         if(this.GetTableWithName(table.GetName()) === null) {
             this.tables.push(table);
         }
-        throw new Error(`Table with name "${table.GetName()}" already exists in the database!`);
+        else throw new Error(`Table with name "${table.GetName()}" already exists in the database!`);
     }
 
     /**

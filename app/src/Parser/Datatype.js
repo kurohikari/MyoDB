@@ -1,6 +1,6 @@
 "use strict";
 // According to https://www.tutorialspoint.com/sqlite/sqlite_data_types.htm
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var Datatype;
 (function (Datatype) {
     // Affinity Integer

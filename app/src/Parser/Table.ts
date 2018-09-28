@@ -16,7 +16,7 @@ export class Table {
         if(this.GetColumnWithName(column.GetName()) === null) {
             this.columns.push(column);
         }
-        throw new Error(`Column with name "${column.GetName()}" already exists!`);
+        else throw new Error(`Column with name "${column.GetName()}" already exists!`);
     }
 
     /**

@@ -1,15 +1,16 @@
-import { Parser } from "../../src/Parser/Parse";
+import { Parser } from "../../src/Parser/Parser";
 import { Datatype } from "../../src/Parser/Datatype";
+import * as path from "path";
 
 export class TestParser {
 
-    public static main(): number{
+    public static main(): number {
         this.Test1()
         return 0;
     }
 
     public static Test1() {
-        let dbs = Parser.Parse("./test.mdb");
+        let dbs = Parser.Parse(path.join(`${__dirname}` ,"test.mdb"));
         if(dbs.length !== 1) throw new Error(`1 Database should have been parsed instead of ${dbs.length}!`);
         
         let db = dbs[0];
@@ -48,3 +49,5 @@ export class TestParser {
     }
 
 }
+
+TestParser.main();

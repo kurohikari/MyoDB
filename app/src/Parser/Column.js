@@ -1,22 +1,21 @@
 "use strict";
-exports.__esModule = true;
-var Column = /** @class */ (function () {
-    function Column(name, datatype) {
+Object.defineProperty(exports, "__esModule", { value: true });
+class Column {
+    constructor(name, datatype) {
         this.name = name;
         this.datatype = datatype;
     }
     /**
      * Get the name of the column
      */
-    Column.prototype.GetName = function () {
+    GetName() {
         return this.name;
-    };
+    }
     /**
      * Get the datatype of the column
      */
-    Column.prototype.GetDatatype = function () {
+    GetDatatype() {
         return this.datatype;
-    };
-    return Column;
-}());
+    }
+}
 exports.Column = Column;

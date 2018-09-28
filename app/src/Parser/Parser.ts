@@ -11,7 +11,6 @@ export class Parser {
      * @param path path of the file to parse
      */
     public static Parse(path: string) {
-        if(!fs.existsSync(path)) throw new Error(`File at path ${path} does not exist!`);
         if(!path.endsWith(".mdb")) throw new Error(`File is not an mdb file!`);
         let file = fs.readFileSync(path).toString();
         let lines = file.split("\n");

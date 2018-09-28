@@ -1,14 +1,12 @@
 "use strict";
-exports.__esModule = true;
-var Datatype_1 = require("./Datatype");
-var DatatypeHelper = /** @class */ (function () {
-    function DatatypeHelper() {
-    }
+Object.defineProperty(exports, "__esModule", { value: true });
+const Datatype_1 = require("./Datatype");
+class DatatypeHelper {
     /**
      * Returns the datatype represented by the string
      * @param str string to be interpreted
      */
-    DatatypeHelper.DatatypeForString = function (str) {
+    static DatatypeForString(str) {
         str = str.trim().toUpperCase();
         // Integer
         if (str === "INT")
@@ -66,8 +64,7 @@ var DatatypeHelper = /** @class */ (function () {
         else if (str === "DATETIME")
             return Datatype_1.Datatype.DATETIME;
         else
-            throw new Error("Unknown datatype passed: " + str);
-    };
-    return DatatypeHelper;
-}());
+            throw new Error(`Unknown datatype passed: ${str}`);
+    }
+}
 exports.DatatypeHelper = DatatypeHelper;
