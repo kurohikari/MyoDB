@@ -3,5 +3,12 @@
         "name": "Arthur Geneau"
     },
     "description": "None so far",
-    "version": "0.0.0"
+    "version": "0.0.0",
+    "dependencies": {
+        "@types/node": "^10.11.0",
+        "sqlite3": "^4.0.2"
+    },
+    "scripts": {
+        "test": "tsc -t es6 -m commonjs ./app/tests/Parser/TestParser.ts & node ./app/tests/Parser/TestParser.js"
+    }
 }
