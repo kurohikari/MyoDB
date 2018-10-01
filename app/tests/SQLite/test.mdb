@@ -1,0 +1,9 @@
+DATABASE MyoDB
+    TABLE MyoTable1
+        COLUMN id,int
+        COLUMN name,text
+        COLUMN date,date
+    
+    TABLE MyoTable2
+        COLUMN uname,text
+        COLUMN time,float
